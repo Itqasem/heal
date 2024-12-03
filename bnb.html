@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد طبيب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .booking-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .booking-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group textarea {
+            resize: none;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <h2>حجز موعد طبيب</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">اسم المريض:</label>
+                <input type="text" id="name" placeholder="أدخل اسمك" required>
+            </div>
+            <div class="form-group">
+                <label for="date">تاريخ الموعد:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">وقت الموعد:</label>
+                <select id="time" required>
+                    <option value="">اختر الوقت</option>
+                    <option value="10:00">10:00 صباحًا</option>
+                    <option value="12:00">12:00 ظهرًا</option>
+                    <option value="2:00">2:00 مساءً</option>
+                    <option value="4:00">4:00 مساءً</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">رسالتك للطبيب:</label>
+                <textarea id="message" rows="4" placeholder="اكتب رسالتك هنا"></textarea>
+            </div>
+            <button type="submit" class="btn">إرسال</button>
+        </form>
+    </div>
+</body>
+</html>

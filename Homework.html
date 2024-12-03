@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration form</title>
+    <style>
+        body {
+            background-color: #2C2F36;
+            color: white; 
+            padding: 20px;    
+            border-style: solid;
+            border-width: 30px;
+            border-left-color: #2C2F36;
+            border-top-color: #5B9B8C;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #5B9B8C;
+            text-shadow: 5px 2px 4px #333;
+            text-align: center;
+        }
+
+        p, footer {
+            text-align: center;
+            color: #5B9B8C;
+        }
+
+        label {
+            font-weight: bold;
+            color: #B0BEC5;
+        }
+
+        input, select, textarea {
+            background-color: #424242; 
+            color: white;
+            border: 1px solid #5B9B8C; 
+            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 15px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            background-color: #5B9B8C; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4C7B6F; /* 
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .imag {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #555;
+        }
+
+        footer {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        /* تأثير الحركات الخاصة بـ SVG */
+        svg rect {
+            transition: all 0.5s ease;
+        }
+        
+        svg rect:nth-child(1) {
+            fill: #5B9B8C;
+        }
+
+        svg rect:nth-child(2) {
+            fill: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <svg width="200" height="50">
+        <rect width="200" height="100" fill="black">
+            <animate attributeName="x" from="-150" to="100"
+            dur="3s" fill="freeze" repeatCount="indefinite"/> 
+        </rect>
+    </svg>
+    <svg width="200" height="50">
+        <rect width="200" height="100" fill="#5B9B8C">
+            <animate attributeName="x" from="80" to="-150"
+            dur="3s" fill="freeze" repeatCount="indefinite"/> 
+        </rect>
+    </svg>
+
+    <h1>Registration form</h1>
+
+    <img class="imag" src="https://static.vecteezy.com/system/resources/previews/000/180/338/original/online-learning-vector.jpg" alt="logo-kecbu11">
+    <p>-Fill in all the required information!</p>
+
+    <form>
+
+        <label for="email">E-mail:</label><br />
+        <input id="email" name="E-mail" type="text" placeholder="qasem.ahmed@gmail.com" required/><br />
+
+        <label for="username">First name:</label><br />
+        <input id="user" name="Username" type="text" required /><br />
+
+        <label for="username">Last name:</label><br />
+        <input id="user" name="Username" type="text" required /><br />
+
+        <label for="gender">Gender:</label><br />
+        <input type="radio" name="gender" value="male" /> <b>Male</b>
+        <input type="radio" name="gender" value="female"><b> Female</b><br />
+
+        <label for="country">Country:</label><br />
+        <select id="country" name="country">
+            <option value="Iraq">Iraq</option>
+            <option value="Afganistan">Afghanistan</option>
+            <option value="Brazil">Brazil</option>
+            <option value="China">China</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Finland">Finland</option>
+            <option value="Germany">Germany</option>
+            <option value="Jordan">Jordan</option>
+            <!-- يمكن إضافة المزيد من الدول هنا -->
+        </select><br />
+
+        <label for="address">Address:</label><br />
+        <input id="Address" name="Address" type="text" required /><br />
+
+        <label for="tel">Mobile phone (+964):</label><br />
+        <input id="tel" name="tel" type="tel" placeholder="079xxxxxxxx (optional)" /> <br />
+
+        <label for="password">Password:</label><br />
+        <input id="password" name="password" type="password" minlength="8" maxlength="15" placeholder="Password should contain 8-15 characters" required /><br />
+
+        <label for="bio">Bio:</label><br />
+        <textarea name="Bio" placeholder="(optional)" id="textarea"></textarea><br />
+
+        <input type="checkbox" name="terms" value="1" required />
+        <ins>I accept the terms</ins><br />
+
+        <input type="checkbox" name="updates" value="2" />
+        <ins>Receive email updates</ins><br />
+
+        <input type="submit" value="Register" class="submit"/>
+
+    </form>
+
+    <footer>&copy; Created by Qasem Ahmed ®</footer>
+
+</body>
+</html>
